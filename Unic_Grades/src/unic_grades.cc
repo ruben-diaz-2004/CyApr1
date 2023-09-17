@@ -52,6 +52,8 @@ void Grades::ManualWrite() {
     std::cout << "Introduce un nuevo valor: ";
     std::cin >> NuevoValor;
 
-    calificaciones[NuevaClave] = NuevoValor;
+    if(calificaciones[NuevaClave] < NuevoValor) {
+      calificaciones[NuevaClave] = NuevoValor;
+    }
     }
 }

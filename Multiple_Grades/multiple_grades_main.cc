@@ -13,7 +13,7 @@
 #include <iostream>
 #include <fstream>
 #include "parameters.cc"
-#include "unic_grades.h"
+#include "multiple_grades.h"
 
 
 int main(int argc, char *argv[]) {
@@ -25,6 +25,7 @@ int main(int argc, char *argv[]) {
   mis_notas.FileWrite(input_file);
   mis_notas.Read();
   mis_notas.ManualWrite();
+  mis_notas.Read();
 
   return 0;
 }
