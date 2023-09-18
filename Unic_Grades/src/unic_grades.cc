@@ -26,11 +26,9 @@ Grades::Grades() {
  * los alu y las calificaciones.
 */
 void Grades::FileWrite(std::fstream& archivo){
-  while (archivo) {
-    std::string clave;
-    double puntuacion{0};
-    archivo >> clave >> puntuacion;
-
+  std::string clave{""};
+  double puntuacion{0};
+  while (archivo >> clave >> puntuacion) {
     if(calificaciones_[clave] < puntuacion) {
       calificaciones_[clave] = puntuacion;
     };
