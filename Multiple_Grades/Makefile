@@ -1,31 +1,31 @@
-	# Universidad de La Laguna
-	# Escuela Superior de Ingeniería y Tecnología
-	# Grado en Ingeniería Informática
-	# Asignatura: Computabilidad y Algoritmia
-	# 
-	# @author Rubén Díaz Marrero
-	# @date 16/09/2023
-	# 
+# Universidad de La Laguna
+# Escuela Superior de Ingeniería y Tecnología
+# Grado en Ingeniería Informática
+# Asignatura: Computabilidad y Algoritmia
+# 
+# @author Rubén Díaz Marrero
+# @date 16/09/2023
+# 
 
-	CXX = g++
-	CXXFLAGS = -Wall -std=c++17 -g 
+CXX = g++
+CXXFLAGS = -Wall -std=c++17 -g 
 
-	.PHONY: all clean
+.PHONY: all clean
 
-	all: p01_multiple_grades
+all: p01_multiple_grades
 
-	p01_multiple_grades: src/multiple_grades_main.o src/multiple_grades.o src/parameters.o
-			$(CXX) $(CXXFLAGS) -o $@ $^
+p01_multiple_grades: src/multiple_grades_main.o src/multiple_grades.o src/parameters.o
+		$(CXX) $(CXXFLAGS) -o $@ $^
 	
-	multiple_grades_main.o: src/multiple_grades_main.cc
-			$(CXX) $(CXXFLAGS) -c $^
+multiple_grades_main.o: src/multiple_grades_main.cc
+		$(CXX) $(CXXFLAGS) -c $^
 
-	multiple_grades.o: src/multiple_grades.cc
-			$(CXX) $(CXXFLAGS) -c $^
+multiple_grades.o: src/multiple_grades.cc
+		$(CXX) $(CXXFLAGS) -c $^
 	
-	parameters.o: src/parameters.cc
-			$(CXX) $(CXXFLAGS) -c $^
+parameters.o: src/parameters.cc
+		$(CXX) $(CXXFLAGS) -c $^
 	
-	clean:
-			rm -f src/*.o
-			rm -f p01_single_grades
+clean:
+		rm -f src/*.o
+		rm -f p01_single_grades

@@ -10,22 +10,15 @@
   * de estudiantes.
   */
 
+#ifndef TOOLS_H_
+#define TOOLS_H_
+
 #include <iostream>
-#include <fstream>
-#include "tools.h"
-#include "multiple_grades.h"
+#include "parameters.cc"
+
+bool CheckCorrectParameters(const int argc, char* argv[], const int kCorrectNumber);
 
 
-int main(int argc, char *argv[]) {
-  CheckCorrectParameters(argc, argv, 2);
 
-  std::fstream input_file{argv[1]};
-  
-  Grades mis_notas;
-  mis_notas.FileWrite(input_file);
-  mis_notas.Read();
-  mis_notas.ManualWrite();
-  mis_notas.Read();
 
-  return 0;
-}
+#endif

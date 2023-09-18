@@ -9,6 +9,8 @@
   * @brief Este programa lee ficheros de texto que contienen calificaciones
   * de estudiantes.
   */
+#ifndef MULTIPLE_H_
+#define MULTIPLE_H_
 
 #include <iostream>
 #include <fstream>
@@ -25,3 +27,5 @@ class Grades{
   private:
   std::multimap<std::string, float> calificaciones_;
 };
+
+#endif
