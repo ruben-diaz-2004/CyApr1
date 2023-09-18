@@ -10,11 +10,11 @@
 CXX = g++
 CXXFLAGS = -Wall -std=c++17 -g 
 
-.PHONY: all clean
+
 
 all: p01_multiple_grades
 
-p01_multiple_grades: src/multiple_grades_main.o src/multiple_grades.o src/parameters.o
+p01_multiple_grades: src/multiple_grades_main.o src/multiple_grades.o 
 		$(CXX) $(CXXFLAGS) -o $@ $^
 	
 multiple_grades_main.o: src/multiple_grades_main.cc
@@ -23,9 +23,7 @@ multiple_grades_main.o: src/multiple_grades_main.cc
 multiple_grades.o: src/multiple_grades.cc
 		$(CXX) $(CXXFLAGS) -c $^
 	
-parameters.o: src/parameters.cc
-		$(CXX) $(CXXFLAGS) -c $^
-	
+.PHONY: all clean
 clean:
 		rm -f src/*.o
 		rm -f p01_single_grades
