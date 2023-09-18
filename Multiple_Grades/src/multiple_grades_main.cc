@@ -12,7 +12,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "tools.h"
+#include "parameters.cc"
 #include "multiple_grades.h"
 
 
