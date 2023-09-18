@@ -16,7 +16,6 @@
 
 class Grades{
   public:
-  // Constructor que recive el archivo
   Grades();
   void FileWrite(std::fstream& archivo);
   void Read();
@@ -24,5 +23,5 @@ class Grades{
 
 
   private:
-  std::multimap<std::string, float> calificaciones;
+  std::multimap<std::string, float> calificaciones_;
 };
